@@ -1,0 +1,24 @@
+FROM ghcr.io/linuxserver/baseimage-ubuntu:focal
+
+# set version label
+ARG BUILD_DATE
+ARG VERSION
+LABEL build_version="mbhkoay version:- ${VERSION} Build-date:- ${BUILD_DATE}"
+LABEL maintainer="mbhkoay"
+
+# environment settings
+#ENV XXX_XX_XXXX="asd,asd,asd"
+#ENV XXX_XX_XXXX=asd
+
+RUN \
+ echo "**** install build deps ****" && \
+ apt-get update && \
+# apt-get install -y \
+#    wget && \
+# wget https://link && \
+ echo "**** install app ****" && \
+
+
+# ports and volumes
+#EXPOSE 11000 11000
+#VOLUME /config
